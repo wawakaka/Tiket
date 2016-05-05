@@ -30,7 +30,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
+/**/
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to

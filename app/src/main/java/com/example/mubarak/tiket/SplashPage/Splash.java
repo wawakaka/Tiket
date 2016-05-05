@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.mubarak.tiket.LoginActivity;
 import com.example.mubarak.tiket.MainActivity;
 import com.example.mubarak.tiket.R;
 
@@ -23,7 +24,7 @@ public class Splash extends Activity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(Splash.this,MainActivity.class);
+                    Intent intent = new Intent(Splash.this,LoginActivity.class);
                     startActivity(intent);
                 }
             }

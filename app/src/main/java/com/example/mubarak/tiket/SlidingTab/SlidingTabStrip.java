@@ -15,7 +15,7 @@ package com.example.mubarak.tiket.SlidingTab;
  * limitations under the License.
  */
 
-
+/**/
 
 import android.content.Context;
 import android.graphics.Canvas;
