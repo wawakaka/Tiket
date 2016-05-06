@@ -1,12 +1,20 @@
 package com.example.mubarak.tiket;
 
+
+import android.app.DialogFragment;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.WindowManager;
+
+
 
 import com.example.mubarak.tiket.PageAdapter.ViewPagerAdapter;
 import com.example.mubarak.tiket.SlidingTab.SlidingTabLayout;
+import com.example.mubarak.tiket.Dialog.DatePickerDialog;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,6 +30,10 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //hide keyboad on activity start
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -54,12 +66,16 @@ public class MainActivity extends ActionBarActivity {
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
 
+    }
 
-
+    public void setDate(View view){
+        DatePickerDialog pickerDialog = new DatePickerDialog();
+        pickerDialog.show(getSupportFragmentManager(), "Date Picker");
 
     }
 
-    @Override
+
+
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.animator.push_right_in,R.animator.push_right_out);

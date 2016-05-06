@@ -13,7 +13,7 @@
 
     <!-- Login progress -->
     <ProgressBar
-        android:id="@+id/login_progress"
+        android:id="@+id/register_progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,59 +31,108 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/name"
-                android:ems="10"
-                android:id="@+id/editName"
-                android:layout_gravity="center_horizontal" />
+                android:longClickable="false">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:ems="12"
-                android:hint="@string/phone_number"
-                android:id="@+id/editPhoneNumber"
-                android:layout_gravity="center_horizontal" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/name"
+                    android:ems="10"
+                    android:id="@+id/editName"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TextInputStyle"
+                    />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:ems="12"
-                android:hint="@string/id_number"
-                android:id="@+id/editIdNumber"
-                android:layout_gravity="center_horizontal" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:hint="@string/prompt_email"
-                android:id="@+id/editEmail"
-                android:layout_gravity="center_horizontal" />
+                android:longClickable="false">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/editPassword"
-                android:hint="@string/prompt_password"
-                android:layout_gravity="center_horizontal" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="12"
+                    android:hint="@string/phone_number"
+                    android:id="@+id/editPhoneNumber"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TextInputStyle"
+                    />
 
-            <Button
-                android:id="@+id/sign_up_button"
-                style="?android:textAppearanceSmall"
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_up"
-                android:textStyle="bold" />
+                android:longClickable="false">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="12"
+                    android:hint="@string/id_number"
+                    android:id="@+id/editIdNumber"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TextInputStyle"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:longClickable="false">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:hint="@string/prompt_email"
+                    android:id="@+id/editEmail"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TextInputStyle"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:longClickable="false">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editPassword"
+                    android:hint="@string/prompt_password"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TextInputStyle"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:longClickable="false">
+
+                <Button
+                    android:id="@+id/sign_up_button"
+                    style="@style/ButtonStyle"
+                    android:text="@string/action_sign_up"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
     </ScrollView>

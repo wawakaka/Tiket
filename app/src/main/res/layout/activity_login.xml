@@ -33,11 +33,11 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:id="@+id/imageView"
                 android:layout_gravity="center_horizontal"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/ic_action_name"
                 android:padding="5dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
@@ -55,7 +55,10 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+
+                    style="@style/TextInputStyle"
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -73,29 +76,22 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    style="@style/TextInputStyle"
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/ButtonStyle"
                 android:text="@string/action_sign_in"
-                android:textStyle="bold"
-                android:contextClickable="false"
-                android:layout_gravity="center_horizontal" />
+                />
             <Button
                 android:id="@+id/email_sign_up_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/ButtonStyle"
                 android:text="@string/action_sign_up"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal" />
+                />
 
             <GridLayout
                 android:id="@+id/extra_form"
@@ -116,7 +112,10 @@
                     android:layout_row="0"
                     android:layout_column="0"
                     android:layout_gravity="fill_horizontal"
-                    android:paddingLeft="30dp" />
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    />
 
                 <TextView
                     android:id="@+id/forgot_password"
@@ -129,7 +128,10 @@
                     android:gravity="right"
                     android:layout_row="0"
                     android:layout_column="1"
-                    android:paddingRight="30dp" />
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    />
             </GridLayout>
 
 
