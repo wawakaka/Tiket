@@ -56,6 +56,13 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.animator.push_right_in,R.animator.push_right_out);
     }
 
 

@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mubarak.tiket.SplashPage.Splash"
     android:background="@drawable/splash_plane"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
 </RelativeLayout>
