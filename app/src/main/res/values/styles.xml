@@ -14,7 +14,10 @@
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
-
+    </style>
+    <style name="TextStyle">
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textStyle">bold</item>
     </style>
     <style name="ButtonStyle">
         <item name="android:layout_marginTop">10dp</item>

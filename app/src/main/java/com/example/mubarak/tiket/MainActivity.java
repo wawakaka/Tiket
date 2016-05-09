@@ -1,20 +1,24 @@
 package com.example.mubarak.tiket;
 
 
-import android.app.DialogFragment;
-
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 
-
+import com.example.mubarak.tiket.Dialog.DatePickerDialog1;
+import com.example.mubarak.tiket.Dialog.DatePickerDialog2;
 import com.example.mubarak.tiket.PageAdapter.ViewPagerAdapter;
 import com.example.mubarak.tiket.SlidingTab.SlidingTabLayout;
-import com.example.mubarak.tiket.Dialog.DatePickerDialog;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -25,12 +29,11 @@ public class MainActivity extends ActionBarActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Home","Events"};
+    CharSequence Titles[]={"Flights","Check Booking"};
     int Numboftabs =2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         //hide keyboad on activity start
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -66,19 +69,147 @@ public class MainActivity extends ActionBarActivity {
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
 
+
     }
 
     public void setDate(View view){
-        DatePickerDialog pickerDialog = new DatePickerDialog();
-        pickerDialog.show(getSupportFragmentManager(), "Date Picker");
-
+        DatePickerDialog1 pickerDialog = new DatePickerDialog1();
+        pickerDialog.show(getSupportFragmentManager(), "Date Picker 1");
     }
 
+    public void setReturnDate(View view){
+        DatePickerDialog2 pickerDialog2 = new DatePickerDialog2();
+        pickerDialog2.show(getSupportFragmentManager(), "Date Picker 2");
+    }
 
+    public void toggle(View view){
+        ToggleButton tb = (ToggleButton)findViewById(R.id.toggleButton);
+        EditText et = (EditText)findViewById(R.id.editReturnDate);
+        if(tb.isChecked()){
+            et.setVisibility(View.VISIBLE);
+        }
+        else{
+            et.setVisibility(View.GONE);
+        }
+    }
+
+    public void search(View view){
+        Intent b = new Intent(MainActivity.this,FlightList.class);
+        MainActivity.this.startActivity(b);
+        overridePendingTransition(R.animator.push_left_in,R.animator.push_left_out);
+    }
 
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.animator.push_right_in,R.animator.push_right_out);
+    }
+
+    public void plusa(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b+1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
+    }
+
+    public void plusb(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber2);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b+1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
+    }
+
+    public void plusc(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber3);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b+1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
+    }
+
+    public void mina(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b-1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
+    }
+
+    public void minb(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber2);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b-1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
+    }
+
+    public void minc(View view){
+        Context context = getApplicationContext();
+        TextView n = (TextView)findViewById(R.id.amountNumber3);
+        try
+        {
+            String a = n.getText().toString().trim();
+
+            int b = Integer.parseInt(a);
+
+            int sum = b-1;
+            n.setText(sum+"");
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(context,nfe+"",Toast.LENGTH_LONG);
+        }
     }
 
 

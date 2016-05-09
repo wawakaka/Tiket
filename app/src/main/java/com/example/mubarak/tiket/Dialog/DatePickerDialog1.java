@@ -1,15 +1,19 @@
 package com.example.mubarak.tiket.Dialog;
 
 import android.app.Dialog;
+
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+
 import com.example.mubarak.tiket.R;
 import java.util.Calendar;
 
 //import for date picker dialog for api 23 above
-/*import android.app.DatePickerDialog;
+/*import android.app.DatePickerDialog1;
 import android.app.Dialog;
 import android.os.Bundle;
 
@@ -28,18 +32,21 @@ import java.text.DateFormat;*/
 /**
  * Created by MUBARAK on 5/6/2016.
  */
-public class DatePickerDialog extends DialogFragment implements android.app.DatePickerDialog.OnDateSetListener{
+public class DatePickerDialog1 extends DialogFragment implements android.app.DatePickerDialog.OnDateSetListener{
+
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
 
-        Calendar calendar = Calendar.getInstance();
+        final Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         android.app.DatePickerDialog dialog;
         dialog = new android.app.DatePickerDialog(getActivity(),this,year,month,day);
+
+        dialog.setTitle("Pick your date");
         return dialog;
 
 
@@ -47,13 +54,16 @@ public class DatePickerDialog extends DialogFragment implements android.app.Date
 
     @Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-        EditText editDate = (EditText)getActivity().findViewById(R.id.editDate);
+        EditText date = (EditText)getActivity().findViewById(R.id.editDate);
+        date.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
 
-        editDate.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
     }
+
+
+
 }
 //date picker dialog for api 23 or above
-/*class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener{
+/*class DatePickerFragment extends DialogFragment implements DatePickerDialog1.OnDateSetListener{
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -63,12 +73,12 @@ public class DatePickerDialog extends DialogFragment implements android.app.Date
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
             *//*
-                Initialize a new DatePickerDialog
+                Initialize a new DatePickerDialog1
 
-                DatePickerDialog(Context context, DatePickerDialog.OnDateSetListener callBack,
+                DatePickerDialog1(Context context, DatePickerDialog1.OnDateSetListener callBack,
                     int year, int monthOfYear, int dayOfMonth)
              *//*
-        DatePickerDialog dpd = new DatePickerDialog(getActivity(),this,year,month,day);
+        DatePickerDialog1 dpd = new DatePickerDialog1(getActivity(),this,year,month,day);
         return  dpd;
     }
 
