@@ -86,11 +86,15 @@
                 android:id="@+id/email_sign_in_button"
                 style="@style/ButtonStyle"
                 android:text="@string/action_sign_in"
+                android:background="@drawable/button_custom"
+                android:textColor="@color/btnf"
                 />
             <Button
                 android:id="@+id/email_sign_up_button"
                 style="@style/ButtonStyle"
                 android:text="@string/action_sign_up"
+                android:background="@drawable/button_custom"
+                android:textColor="@color/btnf"
                 />
 
             <GridLayout

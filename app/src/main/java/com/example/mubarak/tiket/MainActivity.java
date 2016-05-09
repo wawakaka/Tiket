@@ -41,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
+
         // Creating The Toolbar and setting it as the Toolbar for the activity
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -66,8 +67,11 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
+
+
 
 
     }

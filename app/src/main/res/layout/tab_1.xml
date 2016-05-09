@@ -110,19 +110,27 @@
                     />
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:layout_marginLeft="20dp"
                 android:text="Passanger"
                 android:layout_row="0"
                 android:layout_column="0"/>
+
+            </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
 
 
@@ -160,7 +168,10 @@
                 android:text="Search"
                 android:id="@+id/SearchFlights"
                 android:layout_gravity="center_horizontal"
-                android:onClick="search"/>
+                android:onClick="search"
+                android:background="@drawable/button_custom"
+                android:textColor="@color/btnf"
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
     </ScrollView>

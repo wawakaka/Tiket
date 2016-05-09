@@ -10,11 +10,15 @@
         android:text="-"
         android:id="@+id/minButton"
         android:layout_gravity="center_horizontal"
-        android:layout_centerHorizontal="true" 
         android:layout_marginTop="10dp"
         android:onClick="mina"
-        
-        />
+        android:background="@drawable/button_custom"
+        android:textColor="@color/btnf"
+
+        android:layout_alignRight="@+id/detailText2"
+        android:layout_alignEnd="@+id/detailText2"
+        android:layout_alignLeft="@+id/detailText2"
+        android:layout_alignStart="@+id/detailText2" />
 
     <TextView
         android:layout_below="@+id/minButton"
@@ -65,14 +69,17 @@
         android:id="@+id/plusButton"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="false"
-        android:layout_alignParentRight="false"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:onClick="plusa"
-        
-        
-        />
+        android:background="@drawable/button_custom"
+        android:textColor="@color/btnf"
+
+
+        android:layout_alignRight="@+id/detailText2"
+        android:layout_alignEnd="@+id/detailText2"
+        android:layout_alignLeft="@+id/detailText2"
+        android:layout_alignStart="@+id/detailText2" />
 
 
 </RelativeLayout>

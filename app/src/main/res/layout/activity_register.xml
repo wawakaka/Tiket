@@ -130,6 +130,8 @@
                     android:id="@+id/sign_up_button"
                     style="@style/ButtonStyle"
                     android:text="@string/action_sign_up"
+                    android:background="@drawable/button_custom"
+                    android:textColor="@color/btnf"
                     />
 
             </android.support.design.widget.TextInputLayout>
