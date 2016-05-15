@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,14 +12,264 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         />
-
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/fl1"
+        android:layout_below="@+id/tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView">
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Your Flight"
+                    android:id="@+id/textView"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="10dp"
+                    android:layout_margin="20dp"
+                    card_view:cardBackgroundColor="@color/background"
+                    android:elevation="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="asal -> tujuan"
+                                android:paddingLeft="20dp"
+                                android:id="@+id/textView2" />
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="Details"
+                                    android:textColor="@color/btn"
+                                    android:id="@+id/textView2d"
+                                    android:paddingRight="20dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="nama bandara 1 - nama bandara 2"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="waktu keberangkatan"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="durasi perjalanan"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
 
 
-    </ScrollView>
 
 
-</LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Contacts Details"
+                    android:id="@+id/textView3" />
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="10dp"
+                    android:layout_margin="20dp"
+                    card_view:cardBackgroundColor="@color/background"
+                    android:elevation="20dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cDetails"
+                        android:text="Fill Contact Details"
+                        android:background="@color/background"
+                        android:onClick="contactDetails"/>
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Travel Insurance"
+                    android:id="@+id/textView5" />
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="10dp"
+                    android:layout_margin="20dp"
+                    card_view:cardBackgroundColor="@color/background"
+                    android:elevation="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ToggleButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/toggleButton2"
+                                android:textOff=""
+                                android:textOn=""
+                                android:layout_weight="1"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/switch_icon"
+                                android:onClick="toggle2"
+                                />
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Add Travel Insurance XYZ"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp 100.000/pax"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Learn More"
+                                    android:textColor="@color/btn"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/lncb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="20dp"
+                                android:visibility="gone">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="By purchasing this insurance, I aggre to all conditions of the insurance application by XYZ"
+                                android:id="@+id/checkBox"
+                                android:checked="false"
+                                android:layout_weight="1"
+                                android:maxLines="4"
+                                android:lines="4"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="4"
+                                android:lines="4"
+                                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Price"
+                                android:paddingLeft="20dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 999.999"
+                                android:paddingLeft="20dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/fdContinue"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="fdContinue"
+                    android:background="@drawable/button_custom"
+                    android:textColor="@color/btnf"
+                    android:padding="20dp"
+                    android:layout_margin="20dp"/>
+            </LinearLayout>
+
+
+
+
+
+        </ScrollView>
+
+    </FrameLayout>
+
+
+
+
+
+</RelativeLayout>
