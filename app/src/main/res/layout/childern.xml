@@ -10,14 +10,11 @@
         android:text="-"
         android:id="@+id/minButton2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
         android:onClick="minb"
         android:background="@drawable/button_custom"
         android:textColor="@color/btnf"
-        android:layout_alignRight="@+id/detailText22"
-        android:layout_alignEnd="@+id/detailText22"
-        android:layout_alignLeft="@+id/detailText22"
-        android:layout_alignStart="@+id/detailText22" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_below="@+id/minButton2"
@@ -54,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="12 - 2 years"
         android:id="@+id/detailText22"
-
+        android:lines="1"
         android:layout_centerHorizontal="true"
 
 
@@ -63,22 +60,15 @@
 
 
     <Button
-        android:layout_below="@+id/detailText22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/plusButton2"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="false"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_marginTop="10dp"
         android:onClick="plusb"
         android:background="@drawable/button_custom"
         android:textColor="@color/btnf"
-        android:layout_alignRight="@+id/detailText22"
-        android:layout_alignEnd="@+id/detailText22"
-        android:layout_alignLeft="@+id/detailText22"
-        android:layout_alignStart="@+id/detailText22" />
+        android:layout_below="@+id/detailText22"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
